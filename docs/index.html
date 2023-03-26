@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+		<script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
+		</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -24,7 +26,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro" class="active">The Problem</a></li>
+							<li><a href="#intro" class="active">Abstract</a></li>
 							<li><a href="#architecture">Architecture</a></li>
 							<li><a href="#safety">Safety & Privacy</a></li>
 							<li><a href="#next">Next Steps</a></li>
@@ -39,9 +41,17 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>The Problem</h2>
+											<h2>Abstract</h2>
 										</header>
-										<p>I'll get to the rest later.</p>
+										<div style="text-align: justify;">
+										<p>
+											Large Language Models (LLMs) such as ChatGPT and LLaMA have demonstrated immense potential in various applications. However, these models primarily reflect the broader internet and do not inherently account for the nuances of specific communities or private data. We introduce the "Community Transformers" project, a novel approach to augmenting LLMs with private community and personal data in a secure, privacy-preserving manner. By leveraging secure multiparty computation, private set intersection, and trusted execution environments (TEEs), we enable the continuous updating of community data within a privately hosted LLM, resulting in a tailored Q&A tool that embodies community values and individual circumstances. 
+											</p>
+											<br/>
+											<p>
+											Our solution addresses the limitations of LLMs that stem from their reliance on historical public data and lack of secure contextualization. The Community Transformers project empowers communities to securely and privately amalgamate local data, enabling LLMs to provide contextually relevant answers tailored to the specific needs of the community. This approach not only enhances the utility of LLMs but also ensures the protection of sensitive community and personal information.
+										</p>
+										</div>
 										<ul class="actions special">
 											<li><a href="#" class="button">Read the Whitepaper (Coming Soon)</a></li>
 										</ul>
@@ -53,67 +63,43 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Magna veroeros</h2>
+									<h2>Technical Architecture</h2>
+								</header>
+								<div class="flex flex-wrap items-center">
+									<img class="w-full md:w-1/2 my-5" src="images/diagramV1.png" alt="Technical Diagram">
+									<p class="w-full md:w-1/2 md:pl-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet mauris turpis. Donec posuere, massa eu dignissim lacinia, sapien tortor blandit dui, ut tempus tellus justo vel libero. Nam suscipit tincidunt sapien, sit amet scelerisque enim sagittis et.</p>
+								  </div>
+							</section>
+
+						<!-- Safety Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Safety & Privacy</h2>
+									<p>Addressing safety challenges is crucial when integrating community data with LLMs, ensuring privacy and data security while providing tailored benefits.</p>
 								</header>
 								<ul class="features">
 									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Ipsum consequat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<span class="major fa-4x fa-solid fa-bridge-lock m-2"></span>
+										<h3>Preventing Data Leakage:</h3>
+										<p>Stop sensitive community data from leaking to the public internet. Community data should be community owned.</p>
 									</li>
 									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<span class="major fa-4x fa-solid fa-server m-2"></span>
+										<h3>Local Hosting:</h3>
+										<p> Ensure secure data is not uploaded to commercial APIs for potential use in model training.</p>
 									</li>
 									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<span class="major fa-4x fa-solid fa-eye-slash m-2"></span>
+										<h3>Within Community Privacy:</h3>
+										<p>Aaccessing sensitive data in a privacy-preserving form, such as aggregation, differential privacy, or private set intersections.</p>
+									</li>
+									<li>
+										<span class="major fa-4x fa-solid fa-user-secret m-2"></span>
+										<h3>Private Queries:</h3>
+										<p>Create methods that enable individuals to perform private queries without compromising personal or community privacy.</p>
 									</li>
 								</ul>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
+								<p>By addressing these challenges, we can create a robust framework for the secure and responsible use of community-enhanced Large Language Models, prioritizing privacy and data security.</p>
 							</section>
 
 						<!-- Get Started -->
@@ -160,7 +146,7 @@
 								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
 							</ul>
 						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; MIT Connection Science 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
