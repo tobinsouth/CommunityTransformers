@@ -1,3 +1,5 @@
+@import url(fontawesome-all.min.css);
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 /*
 ! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
 */
@@ -680,12 +682,12 @@ p.content {
   text-align: justify;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.5;
   margin: 0 0 0.7em 0;
   letter-spacing: -0.025em;
-}
+} */
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit;
