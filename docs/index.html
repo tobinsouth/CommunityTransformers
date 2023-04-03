@@ -16,7 +16,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logonotextwhite.svg" alt="" /></span>
+						<span class="logo"><img src="images/logoWhite.svg" alt="" class="w-1/4 md:w-1/3" /></span>
 						<h1>Community Transformers</h1>
 						<p>Securely Using Community Data With Foundation Models</p>
 						<p><em>a project of MIT Connection Science</em></p>
@@ -44,7 +44,7 @@
 										</header>
 										<div style="text-align: justify;">
 										<p>
-											Large Language Models (LLMs) such as ChatGPT and LLaMA have demonstrated immense potential in various applications. However, these models primarily reflect the broader internet and do not inherently account for the nuances of specific communities or private data. We introduce the "Community Transformers" project, a novel approach to augmenting LLMs with private community and personal data in a secure, privacy-preserving manner. By leveraging secure multiparty computation, private set intersection, and trusted execution environments (TEEs), we enable the continuous updating of community data within a privately hosted LLM, resulting in a tailored Q&A tool that embodies community values and individual circumstances. 
+											Large Language Models (LLMs) such as ChatGPT and LLaMA have demonstrated immense potential in various applications. However, these models primarily reflect the broader internet and do not inherently account for the nuances of specific communities or private data. We introduce the "Secure Community Transformers: Private Pooled Data for LLMs" project, a novel approach to augmenting LLMs with private community and personal data in a secure, privacy-preserving manner. By leveraging a combination of traditional privacy transformations, LLM-enabled privacy transformations, trusted execution environments, custodial control of data, and consent-based privacy choices, we enable the continuous updating of community data within a privately hosted LLM, resulting in a tailored Q&A tool that embodies community values and individual circumstances. 
 											</p>
 											<br/>
 											<p>
@@ -52,7 +52,7 @@
 										</p>
 										</div>
 										<ul class="actions special my-2">
-											<li><a href="#" class="button">Read the Whitepaper (Coming Soon)</a></li>
+											<li><a href="SecureCommunityTransfomersMITSouth.pdf" class="button">Read the Whitepaper</a></li>
 										</ul>
 										<p class="m-3"><em>Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, Alex 'Sandy' Pentland</em></p>
 									</div>
@@ -66,7 +66,7 @@
 									<h2>Technical Architecture</h2>
 								</header>
 								<div class="flex flex-wrap items-center">
-									<img class="w-full md:w-1/2 my-5" src="images/diagramV1.svg" alt="Technical Diagram">
+									<img class="w-full md:w-1/2 my-5" src="images/diagramV2black.svg" alt="Technical Diagram">
 									<p class="w-full md:w-1/2 md:pl-4">
 										To ensure that data from individuals and community stakeholders remains private, the entire pipeline of information question answering must be kept secure. In the initial versions of this architecture, features such as hosting solutions that are self-custodial to the community play an essential role in keeping data local, encrypted, and secure.
 										<br/>
@@ -89,12 +89,12 @@
 									<li>
 										<span class="major fa-4x fa-solid fa-server m-2"></span>
 										<h3>Local Hosting:</h3>
-										<p> Ensure secure data is not uploaded to commercial APIs for potential use in model training.</p>
+										<p> Ensure private or sensitive data is not uploaded to commercial APIs for potential use in model training.</p>
 									</li>
 									<li>
 										<span class="major fa-4x fa-solid fa-eye-slash m-2"></span>
 										<h3>Within Community Privacy:</h3>
-										<p>Aaccessing sensitive data in a privacy-preserving form, such as aggregation, differential privacy, or private set intersections.</p>
+										<p>Accessing sensitive data in a privacy-preserving form, such as aggregation, differential privacy, or private set intersections.</p>
 									</li>
 									<li>
 										<span class="major fa-4x fa-solid fa-user-secret m-2"></span>
@@ -119,7 +119,7 @@
 					<footer class="bg-gray-800 text-white p-6">
 						<div class="flex items-center justify-between">
 						<div class="flex items-center">
-							<!-- <img class="h-14 mr-5" src="images/CSlogo.png" alt="MIT Connection Science Logo"> -->
+							<img class="h-14 mr-5" src="images/CSlogo.svg" alt="MIT Connection Science Logo">
 							<p>This is a project of MIT Connection Science, a group led by Alex 'Sandy' Pentland. The authors of this project are Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, and Sandy Pentland. Contact: tsouth@mit.edu</p>
 						</div>
 						</div>
