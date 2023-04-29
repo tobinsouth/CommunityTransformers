@@ -1,156 +1,200 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Community Transformers</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-		<script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
-		</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+  <title>Community Transformers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
+</head>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logonotextwhite.svg" alt="" class="w-1/4 md:w-1/3" /></span>
-						<h1>Secure Community Transformers</h1>
-						<p>Securely Using Private Community Data With Foundation Models</p>
-						<p><em>a project of MIT Connection Science</em></p>
-					</header>
+<body class="is-preload">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Abstract</a></li>
-							<li><a href="#architecture">Architecture</a></li>
-							<li><a href="#safety">Safety & Privacy</a></li>
-							<li><a href="#next">Next Steps</a></li>
-						</ul>
-					</nav>
+  <!-- Wrapper -->
+  <div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
+	<!-- Header -->
+	<header id="header" class="alt">
+	  <span class="logo"><img src="images/logonotextwhite.svg" alt="" class="w-1/4 md:w-1/3" /></span>
+	  <h1>Secure Community Transformers</h1>
+	  <p>Securely Using Private Community Data With Foundation Models</p>
+	  <p><em>a project of MIT Connection Science</em></p>
+	</header>
 
-						<!-- Introduction -->
-							<section id="intro" class="main special">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Abstract</h2>
-										</header>
-										<div style="text-align: justify;">
-										<p>
-											Large Language Models (LLMs) such as ChatGPT and LLaMA have demonstrated immense potential in various applications. However, these models primarily reflect the broader internet and do not inherently account for the nuances of specific communities or private data. We introduce the "Secure Community Transformers: Private Pooled Data for LLMs" project, a novel approach to augmenting LLMs with private community and personal data in a secure, privacy-preserving manner. By leveraging a combination of traditional privacy transformations, LLM-enabled privacy transformations, trusted execution environments, custodial control of data, and consent-based privacy choices, we enable the continuous updating of community data within a privately hosted LLM, resulting in a tailored Q&A tool that embodies community values and individual circumstances. 
-											</p>
-											<br/>
-											<p>
-											Our solution addresses the limitations of LLMs that stem from their reliance on historical public data and lack of secure contextualization. The Community Transformers project empowers communities to securely and privately amalgamate local data, enabling LLMs to provide contextually relevant answers tailored to the specific needs of the community. This approach not only enhances the utility of LLMs but also ensures the protection of sensitive community and personal information.
-										</p>
-										</div>
-										<ul class="actions special my-2">
-											<li><a href="SecureCommunityTransfomersMITSouth.pdf" class="button">Read the Whitepaper</a></li>
-										</ul>
-										<p class="m-3"><em>Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, Alex 'Sandy' Pentland</em></p>
-									</div>
-								</div>
-							</section>
+	<!-- Nav -->
+	<nav id="nav">
+	  <ul>
+		<li><a href="#intro" class="active">Abstract</a></li>
+		<li><a href="#architecture">Architecture</a></li>
+		<li><a href="#safety">Safety & Privacy</a></li>
+		<li><a href="#next">Next Steps</a></li>
+	  </ul>
+	</nav>
 
-						<!-- First Section -->
-							<section id="architecture" class="main special">
-								<header class="major">
-									<h2>Technical Architecture</h2>
-								</header>
-								<div class="flex flex-wrap items-center">
-									<img class="w-full md:w-1/2 my-5" src="images/diagramV2black.svg" alt="Technical Diagram">
-									<p class="w-full md:w-1/2 md:pl-4">
-										To ensure that data from individuals and community stakeholders remains private, the entire pipeline of information question answering must be kept secure. In the initial versions of this architecture, features such as hosting solutions that are self-custodial to the community play an essential role in keeping data local, encrypted, and secure.
-										<br/>
-										In addition to ensuring data security, we draw on a long history of secure computation and community data to extract local insights using tools such as <a href="https://ieeexplore.ieee.org/abstract/document/7163223?casa_token=M-dSkwRaWXsAAAAA:JIOHNY6moQqncpiz-NQP9ZKtCoFEdS53WWOlfeOqDJcfSbmYChKddhGUOk_9iHhqFGXoRRfw">secure MPC</a>, <a href="https://tobin.page/healthierfeed">private set intersections</a>, and trusted ML inference. However, certain elements of this design pose computational or speed challenges, and we welcome public feedback on the model's architecture.</p>
-								  </div>
-							</section>
+	<!-- Main -->
+	<div id="main">
 
-						<!-- Safety Section -->
-							<section id="safety" class="main special">
-								<header class="major">
-									<h2>Safety & Privacy</h2>
-									<p>Addressing safety challenges is crucial when integrating community data with LLMs, ensuring privacy and data security while providing tailored benefits.</p>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="major fa-4x fa-solid fa-bridge-lock m-2"></span>
-										<h3>Preventing Data Leakage:</h3>
-										<p>Stop sensitive community data from leaking to the public internet. Community data should be community owned.</p>
-									</li>
-									<li>
-										<span class="major fa-4x fa-solid fa-server m-2"></span>
-										<h3>Local Hosting:</h3>
-										<p> Ensure private or sensitive data is not uploaded to commercial APIs for potential use in model training.</p>
-									</li>
-									<li>
-										<span class="major fa-4x fa-solid fa-eye-slash m-2"></span>
-										<h3>Within Community Privacy:</h3>
-										<p>Accessing sensitive data in a privacy-preserving form, such as aggregation, differential privacy, or private set intersections.</p>
-									</li>
-									<li>
-										<span class="major fa-4x fa-solid fa-user-secret m-2"></span>
-										<h3>Private Queries:</h3>
-										<p>Create methods that enable individuals to perform private queries without compromising personal or community privacy.</p>
-									</li>
-								</ul>
-								<p>By addressing these challenges, we can create a robust framework for the secure and responsible use of community-enhanced Large Language Models, prioritizing privacy and data security.</p>
-							</section>
-
-						<!-- Get Started -->
-							<section id="next" class="main special">
-								<header class="major">
-									<h2>Next Steps</h2>
-								</header>
-								<p>The proposed system holds great promise for addressing key challenges faced by communities, and we are eager to test its effectiveness in real-world scenarios. Contexts include building tools for unique mental health contexts such as the LGBTQ+ community, where shared experiences and challenges can greatly benefit a support chatbot's usefulness, or local physical communities where insights could be extracted by pooling local data. We believe that the system can address key challenges for many types of communities and we would love to partner with communities that would be interested in participating. If you know of a community that could benefit from this project, contact us.
-								</p>
-							</section>
-					</div>
-
-				<!-- Bibtex Citation -->
-				  <section id="bibtex">
-					<div class="bg-gray-200 p-4 rounded-sm overflow-auto text-black align-left">
-					<h3 class="text-black text-2xl py-2">Bibtex Citation</h3>
-					  <pre>
-@misc{South23CommunityTransformers,
-	title={Secure Community Transformers: Private Pooled Data for LLMs},
-	author={South, Tobin and Zyskind, Guy and Mahari, Robert and Hardjono, Thomas and Pentland, Alex 'Sandy'},
-	year={2023},
-	url={transformers.mit.edu}
-}
-					  </pre>
-					</div>
-				  </section>
-
-				<!-- Footer -->
-					<footer class="bg-gray-800 text-white p-6">
-						<div class="flex items-center justify-between">
-						<div class="flex items-center">
-							<img class="h-14 mr-5" src="images/CSlogo.svg" alt="MIT Connection Science Logo">
-							<p>This is a project of MIT Connection Science, a group led by Alex 'Sandy' Pentland. The authors of this project are Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, and Sandy Pentland. Contact: tsouth@mit.edu</p>
-						</div>
-						</div>
-					</footer>
-				  
-					<p class="copyright">&copy; MIT Connection Science 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-
+	  <!-- Introduction -->
+	  <section id="intro" class="main special">
+		<div class="spotlight">
+		  <div class="content">
+			<header class="major">
+			  <h2>Abstract</h2>
+			</header>
+			<div style="text-align: justify;">
+			  <p>
+				Large Language Models (LLMs) such as ChatGPT and LLaMA have demonstrated immense
+				potential in various applications. However, these models primarily reflect the broader
+				internet and do not inherently account for the nuances of specific communities or
+				private data. We introduce the "Secure Community Transformers: Private Pooled Data for
+				LLMs" project, a novel approach to augmenting LLMs with private community and personal
+				data in a secure, privacy-preserving manner. By leveraging a combination of traditional
+				privacy transformations, LLM-enabled privacy transformations, trusted execution
+				environments, custodial control of data, and consent-based privacy choices, we enable
+				the continuous updating of community data within a privately hosted LLM, resulting in a
+				tailored Q&A tool that embodies community values and individual circumstances.
+			  </p>
+			  <br />
+			  <p>
+				Our solution addresses the limitations of LLMs that stem from their reliance on
+				historical public data and lack of secure contextualization. The Community Transformers
+				project empowers communities to securely and privately amalgamate local data, enabling
+				LLMs to provide contextually relevant answers tailored to the specific needs of the
+				community. This approach not only enhances the utility of LLMs but also ensures the
+				protection of sensitive community and personal information.
+			  </p>
 			</div>
+			<ul class="actions special my-2">
+			  <li><a href="SecureCommunityTransfomersMITSouth.pdf" class="button">Read the Whitepaper</a>
+			  </li>
+			</ul>
+			<p class="m-3"><em>Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, Alex 'Sandy'
+				Pentland</em></p>
+		  </div>
+		</div>
+	  </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	  <!-- First Section -->
+	  <section id="architecture" class="main special">
+		<header class="major">
+		  <h2>Technical Architecture</h2>
+		</header>
+		<div class="flex flex-wrap items-center">
+		  <img class="w-full md:w-1/2 my-5" src="images/diagramV2black.svg" alt="Technical Diagram">
+		  <p class="w-full md:w-1/2 md:pl-4">
+			To ensure that data from individuals and community stakeholders remains private, the entire
+			pipeline of information question answering must be kept secure. In the initial versions of this
+			architecture, features such as hosting solutions that are self-custodial to the community play
+			an essential role in keeping data local, encrypted, and secure.
+			<br />
+			In addition to ensuring data security, we draw on a long history of secure computation and
+			community data to extract local insights using tools such as <a
+			  href="https://ieeexplore.ieee.org/abstract/document/7163223?casa_token=M-dSkwRaWXsAAAAA:JIOHNY6moQqncpiz-NQP9ZKtCoFEdS53WWOlfeOqDJcfSbmYChKddhGUOk_9iHhqFGXoRRfw">secure
+			  MPC</a>, <a href="https://tobin.page/healthierfeed">private set intersections</a>, and
+			trusted ML inference. However, certain elements of this design pose computational or speed
+			challenges, and we welcome public feedback on the model's architecture.
+		  </p>
+		</div>
+	  </section>
 
-	</body>
+	  <!-- Safety Section -->
+	  <section id="safety" class="main special">
+		<header class="major">
+		  <h2>Safety & Privacy</h2>
+		  <p>Addressing safety challenges is crucial when integrating community data with LLMs, ensuring
+			privacy and data security while providing tailored benefits.</p>
+		</header>
+		<ul class="features">
+		  <li>
+			<span class="major fa-4x fa-solid fa-bridge-lock m-2"></span>
+			<h3>Preventing Data Leakage:</h3>
+			<p>Stop sensitive community data from leaking to the public internet. Community data should be
+			  community owned.</p>
+		  </li>
+		  <li>
+			<span class="major fa-4x fa-solid fa-server m-2"></span>
+			<h3>Local Hosting:</h3>
+			<p> Ensure private or sensitive data is not uploaded to commercial APIs for potential use in
+			  model training.</p>
+		  </li>
+		  <li>
+			<span class="major fa-4x fa-solid fa-eye-slash m-2"></span>
+			<h3>Within Community Privacy:</h3>
+			<p>Accessing sensitive data in a privacy-preserving form, such as aggregation, differential
+			  privacy, or private set intersections.</p>
+		  </li>
+		  <li>
+			<span class="major fa-4x fa-solid fa-user-secret m-2"></span>
+			<h3>Private Queries:</h3>
+			<p>Create methods that enable individuals to perform private queries without compromising
+			  personal or community privacy.</p>
+		  </li>
+		</ul>
+		<p>By addressing these challenges, we can create a robust framework for the secure and responsible use
+		  of community-enhanced Large Language Models, prioritizing privacy and data security.</p>
+	  </section>
+
+	  <!-- Get Started -->
+	  <section id="next" class="main special">
+		<header class="major">
+		  <h2>Next Steps</h2>
+		</header>
+		<p>The proposed system holds great promise for addressing key challenges faced by communities, and we
+		  are eager to test its effectiveness in real-world scenarios. Contexts include building tools for
+		  unique mental health contexts such as the LGBTQ+ community, where shared experiences and challenges
+		  can greatly benefit a support chatbot's usefulness, or local physical communities where insights
+		  could be extracted by pooling local data. We believe that the system can address key challenges for
+		  many types of communities and we would love to partner with communities that would be interested in
+		  participating. If you know of a community that could benefit from this project, contact us.
+		</p>
+	  </section>
+	</div>
+
+	<!-- Bibtex Citation -->
+	<section id="bibtex">
+	  <div class="bg-gray-200 p-4 rounded-sm overflow-auto text-black align-left">
+		<h3 class="text-black text-2xl py-2">Bibtex Citation</h3>
+		<pre>
+@misc{South23CommunityTransformers,
+  title={Secure Community Transformers: Private Pooled Data for LLMs},
+  author={South, Tobin and Zyskind, Guy and Mahari, Robert and Hardjono, Thomas and Pentland, Alex 'Sandy'},
+  year={2023},
+  url={transformers.mit.edu}
+}
+			</pre>
+	  </div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-gray-800 text-white p-6">
+	  <div class="flex items-center justify-between">
+		<div class="flex items-center">
+		  <img class="h-14 mr-5" src="images/CSlogo.svg" alt="MIT Connection Science Logo">
+		  <p>This is a project of MIT Connection Science, a group led by Alex 'Sandy' Pentland. The authors of
+			this project are Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, and Sandy Pentland.
+			Contact: tsouth@mit.edu</p>
+		</div>
+	  </div>
+	</footer>
+
+	<p class="copyright">&copy; MIT Connection Science 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
