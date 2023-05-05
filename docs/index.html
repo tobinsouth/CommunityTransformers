@@ -9,7 +9,7 @@
   <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
 </head>
 
@@ -20,7 +20,7 @@
 
 	<!-- Header -->
 	<header id="header" class="alt">
-	  <span class="logo"><img src="images/logonotextwhite.svg" alt="" class="w-1/4 md:w-1/3" /></span>
+	  <span class="logo"><img src="images/logoWhite.svg" alt="" class="w-1/4 md:w-1/3" /></span>
 	  <h1>Secure Community Transformers</h1>
 	  <p>Securely Using Private Community Data With Foundation Models</p>
 	  <p><em>a project of MIT Connection Science</em></p>
@@ -63,7 +63,7 @@
 			  <p>
 				Our solution addresses the limitations of LLMs that stem from their reliance on
 				historical public data and lack of secure contextualization. The Community Transformers
-				project empowers communities to securely and privately amalgamate local data, enabling
+				project empowers communities and organisations to securely and privately amalgamate local data, enabling
 				LLMs to provide contextually relevant answers tailored to the specific needs of the
 				community. This approach not only enhances the utility of LLMs but also ensures the
 				protection of sensitive community and personal information.
@@ -88,8 +88,8 @@
 		  <img class="w-full md:w-1/2 my-5" src="images/diagramV2black.svg" alt="Technical Diagram">
 		  <p class="w-full md:w-1/2 md:pl-4">
 			To ensure that data from individuals and community stakeholders remains private, the entire
-			pipeline of information question answering must be kept secure. In the initial versions of this
-			architecture, features such as hosting solutions that are self-custodial to the community play
+			pipeline of information question answering must be kept secure. 
+			Features such as hosting solutions that are self-custodial to the community play
 			an essential role in keeping data local, encrypted, and secure.
 			<br />
 			In addition to ensuring data security, we draw on a long history of secure computation and
@@ -113,7 +113,7 @@
 		  <li>
 			<span class="major fa-4x fa-solid fa-bridge-lock m-2"></span>
 			<h3>Preventing Data Leakage:</h3>
-			<p>Stop sensitive community data from leaking to the public internet. Community data should be
+			<p>Stop sensitive community or organizational data from leaking to the public internet. Community data should be
 			  community owned.</p>
 		  </li>
 		  <li>
@@ -153,28 +153,30 @@
 		  participating. If you know of a community that could benefit from this project, contact us.
 		</p>
 	  </section>
+
+	  	<!-- Bibtex Citation -->
+		<section id="bibtex">
+			<div class="bg-gray-100 p-4 rounded-sm overflow-auto text-black align-left">
+			<h3 class="text-black text-2xl py-2">Bibtex Citation</h3>
+			<pre class="text-sm">
+@misc{South23CommunityTransformers,
+	title={Secure Community Transformers: Private Pooled Data for LLMs},
+	author={South, Tobin and Zyskind, Guy and Mahari, Robert and Hardjono, Thomas and Pentland, Alex 'Sandy'},
+	year={2023},
+	url={transformers.mit.edu}
+}</pre>
+			</div>
+		</section>
+
 	</div>
 
-	<!-- Bibtex Citation -->
-	<section id="bibtex">
-	  <div class="bg-gray-200 p-4 rounded-sm overflow-auto text-black align-left">
-		<h3 class="text-black text-2xl py-2">Bibtex Citation</h3>
-		<pre>
-@misc{South23CommunityTransformers,
-  title={Secure Community Transformers: Private Pooled Data for LLMs},
-  author={South, Tobin and Zyskind, Guy and Mahari, Robert and Hardjono, Thomas and Pentland, Alex 'Sandy'},
-  year={2023},
-  url={transformers.mit.edu}
-}
-			</pre>
-	  </div>
-	</section>
+
 
 	<!-- Footer -->
 	<footer class="bg-gray-800 text-white p-6">
 	  <div class="flex items-center justify-between">
 		<div class="flex items-center">
-		  <img class="h-14 mr-5" src="images/CSlogo.svg" alt="MIT Connection Science Logo">
+		  <img class="h-14 mr-5" src="images/CSlogo.png" alt="MIT Connection Science Logo">
 		  <p>This is a project of MIT Connection Science, a group led by Alex 'Sandy' Pentland. The authors of
 			this project are Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, and Sandy Pentland.
 			Contact: tsouth@mit.edu</p>
