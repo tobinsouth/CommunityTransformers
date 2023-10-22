@@ -11,6 +11,28 @@
   </noscript>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
+
+  <script>
+	document.addEventListener("DOMContentLoaded", function() {
+	const elem = document.getElementById("demo");
+	const fullText = elem.innerText;
+	elem.innerText = "";
+
+	let index = 0;
+	let wordArray = fullText.split(' ');
+
+	setTimeout(() => {
+	const typingEffect = setInterval(() => {
+		if (index < wordArray.length) {
+		elem.innerText += (elem.innerText ? ' ' : '') + wordArray[index];
+		index++;
+		} else {
+		clearInterval(typingEffect);
+		}
+	}, 60); // 200ms delay between words
+	}, 1400); // 1s delay at first
+	});
+	</script>
 </head>
 
 <body class="is-preload">
@@ -22,7 +44,7 @@
 	<header id="header" class="alt">
 	  <span class="logo"><img src="images/logoWhite.svg" alt="" class="w-1/4 md:w-1/3" /></span>
 	  <h1>Community Transformers</h1>
-	  <p>Securely Using Private Community Data With Foundation Models</p>
+	  <p>Securely Using Private and Distributed Data with Foundation Models</p>
 	  <p><em>a project of MIT Connection Science</em></p>
 	</header>
 
@@ -44,18 +66,15 @@
 		<div class="spotlight">
 		  <div class="content">
 			<div style="text-align: justify;">
-			  <p>
-				Large Language Models (LLMs) such as ChatGPT and LLaMA have demonstrated immense
-				potential in various applications. However, ensuring that these models can be augmented with relevant contextual or business data safely and securely is critical to capitalizing on the diverse data created by individuals and organizations, and making sure that the benefits of LLMs are shared equitably.
-			  </p>
-			  <br />
-			  <p>
+			  <p id="demo">
+				Ensuring LLMs can be augmented with relevant contextual or business data safely and securely is critical to capitalizing on the diverse data created by individuals and organizations, and making sure that the benefits of LLMs are shared equitably.
+			  	<br /> <br />
 				This body of work focuses on both technical and legal / policy solutions, addressing problems from winner-take-all model dynamics to cryptographically secure private retrieval augmented generation. 
 			  </p>
 			</div> 
 			<br/>
 			<header class="major">
-				<h1 class="text-lg" style=" font-size:1.5rem">Read the papers </h1>
+				<h2>Secure Technologies</h2>
 			</header>
 			<div class="card-container">
 				<div class="card">
@@ -87,6 +106,12 @@
 					<br/>
 					<p><em>Alex Berke*, Tobin South*, Robert Mahari, Alex 'Sandy' Pentland</em></p>
 				</div>
+			</div>
+			<br/>
+			<header class="major">
+				<h2>Data and Law</h2>
+			</header>
+			<div class="card-container">
 				<div class="card">
 					<h2 class="card-title">Data Provenance Initiative
 					</h2>
@@ -107,6 +132,12 @@
 					<br/>
 					<p><em>Robert Mahari*, Tobin South*, Alex 'Sandy' Pentland</em></p>
 				</div>
+			</div>
+			<br/>
+			<header class="major">
+				<h2>Policy Commentary</h2>
+			</header>
+			<div class="card-container">
 				<div class="card">
 					<h2 class="card-title">Competition Between AI Foundation Models: Dynamics and Policy Recommendations</h2>
 					<figure><img src="images/AICompetition.png" alt="Technical Diagram"></figure>
@@ -119,7 +150,7 @@
 					<h2 class="card-title">Unlocking the Power of Digital Commons: Data Cooperatives as a Pathway for Data Sovereign, Innovative and Equitable Digital Communities
 					</h2>
 					<figure><img src="images/UnlockingDigitalCommons.png"></figure>
-					<a href="https://www.mdpi.com/2673-6470/3/3/11#" class="button"><p>Article in Management of Digital Ecosystems</p></a>
+					<a href="https://www.mdpi.com/2673-6470/3/3/11#" class="button"><p>Management of Digital Ecosystems</p></a>
 					<p>This paper argues that data cooperatives can democratize digital resources and promote entrepreneurship, particularly for SMEs in small communities. It presents case studies to illustrate the transformative potential of such cooperatives and proposes a policy framework to support their practical implementation globally.
 					</p>
 					<br/>
@@ -149,7 +180,7 @@
 		 </div>
 		  <span class="image"><img src="images/NAEsandy.jpg" alt="" /></span>
 		</div>
-	  </section>
+	</section>
 
 
 	  	<!-- Bibtex Citation -->
@@ -173,14 +204,14 @@
 	  <div class="flex items-center justify-between">
 		<div class="flex items-center">
 		  <img class="h-14 mr-5" src="images/CSlogo.png" alt="MIT Connection Science Logo">
-		  <p>This is a project of MIT Connection Science, a group led by Alex 'Sandy' Pentland. The authors of
+		  <p>This is a project of MIT Connection Science and MIT Human Dynamics, led by Alex 'Sandy' Pentland. The authors of
 			this project are Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, and Sandy Pentland.
 			Contact: tsouth@mit.edu</p>
 		</div>
 	  </div>
 	</footer>
 
-	<p class="copyright">&copy; MIT Connection Science 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+	<!-- <p class="copyright">&copy; MIT Connection Science 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
 
   </div>
 
