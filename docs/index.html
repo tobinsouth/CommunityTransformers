@@ -11,12 +11,12 @@
   </noscript>
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
-
   <script>
 	document.addEventListener("DOMContentLoaded", function() {
 	const elem = document.getElementById("demo");
-	const fullText = elem.innerText;no
-
+	const fullText = elem.innerText;
+	elem.innerText = "";
+	
 	let index = 0;
 	let wordArray = fullText.split(' ');
 
