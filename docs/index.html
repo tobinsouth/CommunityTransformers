@@ -1,217 +1,368 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Community Transformers</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <noscript>
-	<link rel="stylesheet" href="assets/css/noscript.css" />
-  </noscript>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
-  <script>
-	document.addEventListener("DOMContentLoaded", function() {
-	const elem = document.getElementById("demo");
-	const fullText = elem.innerText;
-	elem.innerText = "";
-	
-	let index = 0;
-	let wordArray = fullText.split(' ');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Connection Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
 
-	setTimeout(() => {
-	const typingEffect = setInterval(() => {
-		if (index < wordArray.length) {
-		elem.innerText += (elem.innerText ? ' ' : '') + wordArray[index];
-		index++;
-		} else {
-		clearInterval(typingEffect);
-		}
-	}, 60); // 200ms delay between words
-	}, 1400); // 1s delay at first
-	});
-	</script>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .main-quote {
+            position: relative;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 40px 0;
+            line-height: 1.4;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .main-quote::before {
+            content: '\201C';
+            position: absolute;
+            top: -40px;
+            left: 0;
+            font-size: 200px;
+            color: #f0f0f0;
+            z-index: -1;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .main-quote-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quote-author {
+            font-style: italic;
+            font-weight: normal;
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+
+        .intro-paragraph {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        @keyframes bounce-right {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
+        }
+
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            animation: bounce-right 1.5s ease-in-out 1s;
+        }
+
+        .scroll-cue {
+            text-align: right;
+            color: #999;
+            font-size: 14px;
+            margin-top: 0px;
+            font-style: italic;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 250px;
+            height: 200px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            /* transition: transform 0.1s, box-shadow 0.1s; */
+        }
+
+        .card-special {
+            border: 2px solid #ba0000;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-image-text {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 0 10px;
+            min-width: 200px;
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .team-member-name {
+            font-weight: 600;
+            margin: 10px 0 5px;
+        }
+
+        .team-member-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .section-separator {
+            width: 50%;
+            max-width: 100px;
+            height: 3px;
+            margin: 30px auto;
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 5px 0;
+            background-color: #fcfcfc;
+            font-size: 10px;
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/connection-logo.png" alt="MIT Connection Science" class="logo">
+            <div class="logo-container">
+                <img src="images/hd-logo.png" alt="MIT Media Lab" class="logo">
+                <img src="images/mit-media-lab-logo.png" alt="MIT Media Lab" class="logo">
+            </div>
+        </header>
 
-<body class="is-preload">
+        <main>
+            <div class="main-quote-container">
+                <div class="main-quote">
+                    LLMs like ChatGPT have enormous potential, but we need to think pragmatically about how to minimize and eliminate their risks.
+                    <br>
+                    <span class="quote-author">- Alex 'Sandy' Pentland</span>
+                </div>
+            </div>
 
-  <!-- Wrapper -->
-  <div id="wrapper">
+            <div class="intro-paragraph">
+                <p>
+                    At MIT Connection Science, we're addressing the challenges of AI that matter to organizations through a holistic approach across the AI supply chain. Our work spans three interconnected areas: enhancing data transparency and provenance, securing AI deployment and data sharing, and navigating the complex landscape of AI policy and law. These initiatives collectively aim to create a more responsible, secure, and ethically sound AI ecosystem.
+                </p>
+            </div>
 
-	<!-- Header -->
-	<header id="header" class="alt">
-	  <span class="logo"><img src="images/logoWhite.svg" alt="" class="w-1/4 md:w-1/3" /></span>
-	  <h1>Community Transformers</h1>
-	  <p>Securely Using Private and Distributed Data with Foundation Models</p>
-	  <p><em>a project of MIT Connection Science and MIT Media Lab</em></p>
-	</header>
+            <div class="section-separator"></div>
+            <section class="section">
+                <h2 class="section-title">Data Provenance Initiative</h2>
+                <p class="section-description">This work conducts large-scale audits of the massive datasets that power state-of-the-art AI models, auditing over 4,000 popular text, speech, and video datasets, tracing them from origin to creation, cataloging data sources, licenses, creators, and other metadata. In addition, this work analyzed 14,000 web domains, to understand the evolving provenance and consent signals behind AI data. The purpose of this work is to map the landscape of AI data, improving transparency, documentation, and informed use of data.</p>
+                <div class="carousel">
+                    <a href="https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html" class="card">
+                        <h3>New York Times Coverage</h3>
+                        <p>Read about our work in the New York Times.</p>
+                    </a>
+                    <a href="https://www.dataprovenance.org/" class="card">
+                        <h3>Data Provenance Homepage</h3>
+                        <div class="card-image" style="background-image: url('images/dpi.svg');">
+                        </div>
+                    </a>
+                    <a href="https://www.dataprovenance.org/Consent_in_Crisis.pdf" class="card">
+                        <h3>Decline of the AI Data Commons</h3>
+                        <p>Explore our research on the changing landscape of AI data.</p>
+                    </a>
+                    <a href="https://arxiv.org/abs/2310.16787" class="card">
+                        <h3>Audits of Dataset Licenses</h3>
+                        <p>Learn about our comprehensive audits of AI dataset licenses.</p>
+                    </a>
+                    <a href="https://mit-genai.pubpub.org/pub/uk7op8zs/release/2" class="card">
+                        <h3>Data Authenticity, Consent, and Provenance for AI Are All Broken</h3>
+                        <p>Discover the challenges in AI data management.</p>
+                    </a>
+                    <a href="https://dspace.mit.edu/handle/1721.1/154171" class="card">
+                        <h3>Comment to U.S Copyright Office</h3>
+                        <p>Read our submission on Data Provenance and Copyright.</p>
+                    </a>
+                </div>
+                <div class="scroll-cue">Scroll for more <span class="arrow">➜</span></div>
+            </section>
 
-	<!-- Nav
-	<nav id="nav">
-	  <ul>
-		<li><a href="#intro" class="active">Abstract</a></li>
-		<li><a href="#architecture">Architecture</a></li>
-		<li><a href="#safety">Safety & Privacy</a></li>
-		<li><a href="#next">Next Steps</a></li>
-	  </ul>
-	</nav> -->
+            <div class="section-separator"></div>
+            <section class="section">
+                <h2 class="section-title">Securing AI Deployment and Data Sharing</h2>
+                <p class="section-description">Securing AI Deployment and Data Sharing involves developing and implementing robust methods to ensure that AI technologies are deployed securely and that data shared across systems remains protected. This initiative addresses the growing need for end-to-end security in AI systems, via leveraging a patchwork of technologies across the AI supply chain, particularly in the face of increasingly sophisticated threats. The focus is on innovative techniques such as private RAG, verifiable model evaluations, and secure credentials to safeguard digital spaces.</p>
+                <div class="carousel">
+                    <a href="https://mit-genai.pubpub.org/pub/m4msmss4" class="card">
+                        <h3>End-to-end security for GenAI</h3>
+                        <p>Explore our approach to comprehensive GenAI security.</p>
+                    </a>
+                    <a href="https://arxiv.org/abs/2311.12955" class="card">
+                        <h3>Private Retrieval Augmented Generation</h3>
+                        <p>Learn about our innovative RAG techniques.</p>
+                    </a>
+                    <a href="https://arxiv.org/abs/2402.02675" class="card">
+                        <h3>Verifiable Model Evaluations</h3>
+                        <p>Discover our methods for ensuring AI model integrity.</p>
+                    </a>
+                    <a href="https://cdn.governance.ai/Open_Problems_in_Technical_AI_Governance.pdf" class="card">
+                        <h3>Open Problems in Technical AI Governance</h3>
+                        <p>Explore key challenges in AI governance.</p>
+                    </a>
+                    <a href="#" class="card">
+                        <h3>Personhood Credentials</h3>
+                        <p>Learn about our work on protecting digital spaces.</p>
+                    </a>
+                    <a href="https://arxiv.org/abs/2311.13008" class="card">
+                        <h3>Zero-knowledge tax disclosures</h3>
+                        <p>Discover our research on privacy-preserving financial disclosures.</p>
+                    </a>
+                </div>
+                <div class="scroll-cue">Scroll for more <span class="arrow">➜</span></div>
+            </section>
 
-	<!-- Main -->
-	<div id="main" style="margin-bottom: 20px;">
+            <div class="section-separator"></div>
+            <section class="section">
+                <h2 class="section-title">Policy, AI, and the Law</h2>
+                <p class="section-description">Policy, AI, and the Law explores the intersection of artificial intelligence, policy-making, and legal frameworks. This initiative focuses on developing guidelines and legal mechanisms that ensure AI systems are designed, deployed, and evaluated within a framework that prioritizes safety, fairness, and accountability. The work emphasizes the concept of "Regulation by Design," advocating for AI systems to be built with compliance to legal standards from the ground up. It also addresses the need for safe harbors in AI evaluation and red teaming, allowing for robust testing and assessment of AI models without legal repercussions. Through these efforts, the initiative aims to contribute to a legal environment that fosters innovation while safeguarding public interest and ethical standards in AI.</p>
+                <div class="carousel">
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4753029" class="card">
+                        <h3>Regulation by Design for AI Systems</h3>
+                        <p>Explore our approach to integrating regulation into AI development.</p>
+                    </a>
+                    <a href="https://arxiv.org/abs/2403.04893" class="card">
+                        <h3>A Safe Harbor for AI Evaluation and Red Teaming</h3>
+                        <p>Learn about our proposals for secure AI testing environments.</p>
+                    </a>
+                    <a href="https://www.networklawreview.org/mahari-longpre-generative-ai/" class="card">
+                        <h3>Discit ergo est: Training Data Provenance And Fair Use</h3>
+                        <p>Discover our work on data provenance and fair use in AI.</p>
+                    </a>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4493900" class="card">
+                        <h3>Competition Between AI Foundation Models</h3>
+                        <p>Explore the dynamics of competition in AI development.</p>
+                    </a>
+                    <a href="https://www.science.org/doi/full/10.1126/science.adh4451" class="card">
+                        <h3>Art and the science of generative AI</h3>
+                        <p>Learn about the intersection of art and AI technology.</p>
+                    </a>
+                </div>
+                <div class="scroll-cue">Scroll for more <span class="arrow">➜</span></div>
+            </section>
 
-	  <!-- Introduction -->
-	  <section id="intro" class="main special">
-		<div class="spotlight">
-		  <div class="content">
-			<div style="text-align: justify;">
-			  <p id="demo">
-				Ensuring LLMs can be augmented with relevant contextual or business data safely and securely is critical to capitalizing on the diverse data created by individuals and organizations, and making sure that the benefits of LLMs are shared equitably.
-			  	<br /> <br />
-				This body of work focuses on both technical and legal / policy solutions, addressing problems from winner-take-all model dynamics to cryptographically secure private retrieval augmented generation. 
-			  </p>
-			</div> 
-			<br/>
-			<header class="major">
-				<h2>Secure Technologies</h2>
-			</header>
-			<div class="card-container">
-				<div class="card">
-					<h2 class="card-title">Private Retrieval Augmented Generation (PRAG): A Technology for Securely Using Private Data
-					</h2>
-					<figure><img src="images/PRAG_IVF_diagram.png" alt="Technical Diagram"></figure>
-					<a href="https://openreview.net/pdf?id=JTcaziw7G1" class="button">Article in ICLR Submission</a>
-					<p>Introducing Private Retrieval Augmented Generation (PRAG), a novel method that uses multi-party computation to securely fetch information from distributed databases for use in large language models without compromising privacy. It also presents a new MPC-friendly protocol for inverted file search, enabling fast and private document retrieval in a decentralized manner.</p>
-					<br/>
-					<p><em>Guy Zyskind*, Tobin South*, Alex 'Sandy' Pentland</em></p>
-				</div>
-				<div class="card">
-					<h2 class="card-title">Secure Community Transformers: Private Pooled Data for LLMs
-					</h2>
-					<figure><img src="images/diagramV2black.svg" alt="Technical Diagram"></figure>
-					<a href="SecureCommunityTransfomersMITSouth.pdf" class="button">Read the Whitepaper</a>
-					<p>This paper discusses how large language models (LLMs) can effectively utilize small-scale data for insights across various sectors like consulting, education, healthcare, and law. It presents a framework for navigating trade-offs related to privacy, performance, and transparency, and argues that retrieval augmented generation (RAG) provides a more flexible, efficient, and auditable approach than traditional fine-tuning methods.
-					</p>
-					<br/>
-					<p><em>Tobin South, Guy Zyskind, Robert Mahari, Alex 'Sandy' Pentland</em></p>
-				</div>
-			</div>
-			<br/>
-			<header class="major">
-				<h2>Data and Law</h2>
-			</header>
-			<div class="card-container">
-				<div class="card">
-					<h2 class="card-title">Data Provenance Initiative
-					</h2>
-					<figure><img src="images/DPI.png" alt="Technical Diagram"></figure>
-					<a href="https://www.dataprovenance-explorer.org/" class="button">Explore the Data</a>
-					<p>The Data Provenance Initiative is a large-scale audit of AI datasets used to train large language models. As a first step, we've traced 1800+ popular, text-to-text finetuning datasets from origin to creation, cataloging their data sources, licenses, creators, and other metadata, for researchers to explore using this tool. The purpose of this work is to improve transparency, documentation, and informed use of datasets in AI.
-					</p>
-					<br/>
-					<p><em>Shayne Longpre, Robert Mahari, et al.</em></p>
-				</div>
-				<div class="card">
-					<h2 class="card-title">Legal Perspective on Auditability and Updateability
-					</h2>
-					<figure><img src="images/NLR_DALLE.png" alt="Technical Diagram"></figure>
-					<a href="https://www.networklawreview.org/computational-three/" class="button">Article in Network Law Review</a>
-					<p>A key design element of the Secure Community Transformers project is the ability for models to be auditable and updatable, key requirements in the wake of GDPR and CCPA. This builds into a framework of transparency by design, a topic that is explored from a legal perspective in the piece published in Network Law Review below.
-					</p>
-					<br/>
-					<p><em>Robert Mahari*, Tobin South*, Alex 'Sandy' Pentland</em></p>
-				</div>
-			</div>
-			<br/>
-			<header class="major">
-				<h2>Policy Commentary</h2>
-			</header>
-			<div class="card-container">
-				<div class="card">
-					<h2 class="card-title">Competition Between AI Foundation Models: Dynamics and Policy Recommendations</h2>
-					<figure><img src="images/AICompetition.png" alt="Technical Diagram"></figure>
-					<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4493900" class="button">Working Paper on SSRN</a>
-					<p>Generative AI is set to become a critical technology for our modern economies. If we are currently experiencing a strong, dynamic competition between the underlying foundation models, legal institutions have an important role to play in ensuring that the spring of foundation models does not turn into a winter with an ecosystem frozen by a handful of players.</p>
-					<br/>
-					<p><em>Thibault Schrepel, Alex 'Sandy' Pentland</em></p>
-				</div>
-				<div class="card">
-					<h2 class="card-title">Unlocking the Power of Digital Commons: Data Cooperatives as a Pathway for Data Sovereign, Innovative and Equitable Digital Communities
-					</h2>
-					<figure><img src="images/UnlockingDigitalCommons.png"></figure>
-					<a href="https://www.mdpi.com/2673-6470/3/3/11#" class="button"><p>Management of Digital Ecosystems</p></a>
-					<p>This paper argues that data cooperatives can democratize digital resources and promote entrepreneurship, particularly for SMEs in small communities. It presents case studies to illustrate the transformative potential of such cooperatives and proposes a policy framework to support their practical implementation globally.
-					</p>
-					<br/>
-					<p><em>Bühler et al.</em></p>
-				</div>
-			</div>
-		  </div>
-		</div>
-	  </section>
+            <div class="section-separator"></div>
+            <section class="section">
+                <h2 class="section-title">The Team</h2>
+                <div class="carousel">
+                    <a href="https://en.wikipedia.org/wiki/Alex_Pentland" class="team-member">
+                        <img src="images/team/sandy.jpg" alt="Sandy Pentland">
+                        <h3 class="team-member-name">Alex 'Sandy' Pentland</h3>
+                        <p class="team-member-title">MIT Professor and Stanford HAI Fellow</p>
+                    </a>
+                    <a href="https://tobin.page/" class="team-member">
+                        <img src="images/team/tobin.jpg" alt="Tobin South">
+                        <h3 class="team-member-name">Tobin South</h3>
+                        <p class="team-member-title">Senior PhD and AI Security Research Lead</p>
+                    </a>
+                    <a href="https://robertmahari.com/" class="team-member">
+                        <img src="images/team/robert.jpg" alt="Robert Mahari">
+                        <h3 class="team-member-name">Robert Mahari</h3>
+                        <p class="team-member-title">Harvard Law School JD and MIT Senior PhD</p>
+                    </a>
+                    <a href="https://www.shaynelongpre.com/" class="team-member">
+                        <img src="images/team/shayne.jpg" alt="Shayne Longpre">
+                        <h3 class="team-member-name">Shayne Longpre</h3>
+                        <p class="team-member-title">Senior PhD and Data Provenance Leader</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabriele-mazzini-2baa948" class="team-member">
+                        <img src="images/team/mazzini.jpg" alt="Gabriele Mazzini">
+                        <h3 class="team-member-name">Gabriele Mazzini</h3>
+                        <p class="team-member-title">Chief Architect of EU AI Act, MIT Connection Science Fellow</p>
+                    </a>
+                    <a href="https://x.com/guyzys" class="team-member">
+                        <img src="images/team/guy.jpg" alt="Guy Zyskind">
+                        <h3 class="team-member-name">Guy Zyskind</h3>
+                        <p class="team-member-title">Serial Crypto & Web3 Founder, MIT PhD Alum</p>
+                    </a>
+                    <!-- thomas hardjono -->
+                    <a href="https://hardjono.mit.edu/" class="team-member">
+                        <img src="images/team/hardjono.jpg" alt="Thomas Hardjono">
+                        <h3 class="team-member-name">Thomas Hardjono</h3>
+                        <p class="team-member-title">CTO of MIT Connection Science</p>
+                    </a>
+                </div>
+                <div class="scroll-cue">Scroll for the full team<span class="arrow">➜</span></div>
+            </section>
+        </main>
+    </div>
 
-	  <section id="Sandy" class="main special">
-		<div class="spotlight">
-		  <div class="content">
-			<header class="major">
-			  <h2>Want to see how this all fits together?</h2>
-			</header>
-			<div>
-			<p>Prof. Pentland gave a Special Lecture on Engineering and Society at the National Academy of Engineering (NAE) Annual Meeting.</p>
-			<br/>
-
-			<a href="https://www.nationalacademies.org/news/2023/10/how-ai-can-help-predict-human-behavior-and-accelerate-solutions-to-societal-challenges" style="display: inline-block; border: 2px solid; padding: 10px;">
-			<div style="white-space: normal; overflow: hidden; text-overflow: ellipsis;">
-				<strong>Read and Watch: How AI Can Help Predict Human Behavior and Accelerate Solutions to Societal Challenges</strong>
-			</div>
-			</a>
-		</div>
-		 </div>
-		  <span class="image"><img src="images/NAEsandy.jpg" alt="" /></span>
-		</div>
-	</section>
-
-
-	  	<!-- Bibtex Citation -->
-		<!-- <section id="bibtex">
-			<div class="bg-gray-100 p-4 rounded-sm overflow-auto text-black align-left">
-			<h3 class="text-black text-2xl py-2">Bibtex Citation</h3>
-			<pre class="text-sm">
-@misc{South23CommunityTransformers,
-	title={Secure Community Transformers: Private Pooled Data for LLMs},
-	author={South, Tobin and Zyskind, Guy and Mahari, Robert and Hardjono, Thomas and Pentland, Alex 'Sandy'},
-	year={2023},
-	url={transformers.mit.edu}
-}</pre>
-			</div>
-		</section>
-
-	</div> -->
-
-	<!-- Footer -->
-	<!-- <footer class="bg-gray-800 text-white p-6">
-	  <div class="flex items-center justify-between">
-		<div class="flex items-center">
-		  <img class="h-14 mr-5" src="images/CSlogo.png" alt="MIT Connection Science Logo">
-		  <p>This is a project of MIT Connection Science and MIT Human Dynamics, led by Alex 'Sandy' Pentland. The authors of
-			this project are Tobin South, Guy Zyskind, Robert Mahari, Thomas Hardjono, and Sandy Pentland.
-			Contact: tsouth@mit.edu</p>
-		</div>
-	  </div>
-	</footer> -->
-
-	<!-- <p class="copyright">&copy; MIT Connection Science 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
-	<br>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
+    <footer>
+        <p>For questions, please contact <a href="mailto:pentland@mit.edu">pentland@mit.edu</a> or <a href="mailto:tsouth@mit.edu">tsouth@mit.edu</a></p>
+    </footer>
 </body>
-
 </html>
