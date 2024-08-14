@@ -12,6 +12,8 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
+            background-color: #fbfbfb;
+            /* background-color: #faf6d8; */
         }
 
         .container {
@@ -25,10 +27,31 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
+            flex-wrap: nowrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Adds space between logos */
         }
 
         .logo {
             height: 50px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+
+            .logo {
+                height: auto;
+                max-height: 40px; /* Adjust this value as needed */
+            }
         }
 
         .main-quote {
@@ -48,7 +71,7 @@
             top: -40px;
             left: 0;
             font-size: 200px;
-            color: #f0f0f0;
+            color: #cccbc6;
             z-index: -1;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
@@ -115,9 +138,14 @@
             flex: 0 0 auto;
             width: 250px;
             height: 200px;
-            background-color: #f5f5f5;
+            background-color: #f3f2ed;
+            /* background-color: #fcfcfc; */
             border-radius: 10px;
-            padding: 20px;
+            /* padding: 20px; */
+            padding-left: 20px;
+            padding-right: 20px;
+            /* padding-top: 10px; */
+            padding-bottom: 20px;
             text-decoration: none;
             color: inherit;
             transition: transform 0.2s;
@@ -134,6 +162,10 @@
 
         .card-special {
             border: 2px solid #ba0000;
+        }
+
+        .card-title {
+            color: #ea9066;
         }
 
         .card-image {
@@ -156,6 +188,8 @@
             text-align: center;
             margin: 0 10px;
             min-width: 200px;
+            text-decoration: none;
+            color: inherit;
         }
 
         .team-member img {
@@ -225,28 +259,28 @@
                 <p class="section-description">This work conducts large-scale audits of the massive datasets that power state-of-the-art AI models, auditing over 4,000 popular text, speech, and video datasets, tracing them from origin to creation, cataloging data sources, licenses, creators, and other metadata. In addition, this work analyzed 14,000 web domains, to understand the evolving provenance and consent signals behind AI data. The purpose of this work is to map the landscape of AI data, improving transparency, documentation, and informed use of data.</p>
                 <div class="carousel">
                     <a href="https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html" class="card">
-                        <h3>New York Times Coverage</h3>
+                        <h3 class="card-title">New York Times Coverage</h3>
                         <p>Read about our work in the New York Times.</p>
                     </a>
                     <a href="https://www.dataprovenance.org/" class="card">
-                        <h3>Data Provenance Homepage</h3>
+                        <h3 class="card-title">Data Provenance Homepage</h3>
                         <div class="card-image" style="background-image: url('images/dpi.svg');">
                         </div>
                     </a>
                     <a href="https://www.dataprovenance.org/Consent_in_Crisis.pdf" class="card">
-                        <h3>Decline of the AI Data Commons</h3>
+                        <h3 class="card-title">Decline of the AI Data Commons</h3>
                         <p>Explore our research on the changing landscape of AI data.</p>
                     </a>
                     <a href="https://arxiv.org/abs/2310.16787" class="card">
-                        <h3>Audits of Dataset Licenses</h3>
+                        <h3 class="card-title">Audits of Dataset Licenses</h3>
                         <p>Learn about our comprehensive audits of AI dataset licenses.</p>
                     </a>
                     <a href="https://mit-genai.pubpub.org/pub/uk7op8zs/release/2" class="card">
-                        <h3>Data Authenticity, Consent, and Provenance for AI Are All Broken</h3>
+                        <h3 class="card-title">Data Authenticity, Consent, and Provenance for AI Are All Broken</h3>
                         <p>Discover the challenges in AI data management.</p>
                     </a>
                     <a href="https://dspace.mit.edu/handle/1721.1/154171" class="card">
-                        <h3>Comment to U.S Copyright Office</h3>
+                        <h3 class="card-title">Comment to U.S Copyright Office</h3>
                         <p>Read our submission on Data Provenance and Copyright.</p>
                     </a>
                 </div>
@@ -259,27 +293,27 @@
                 <p class="section-description">Securing AI Deployment and Data Sharing involves developing and implementing robust methods to ensure that AI technologies are deployed securely and that data shared across systems remains protected. This initiative addresses the growing need for end-to-end security in AI systems, via leveraging a patchwork of technologies across the AI supply chain, particularly in the face of increasingly sophisticated threats. The focus is on innovative techniques such as private RAG, verifiable model evaluations, and secure credentials to safeguard digital spaces.</p>
                 <div class="carousel">
                     <a href="https://mit-genai.pubpub.org/pub/m4msmss4" class="card">
-                        <h3>End-to-end security for GenAI</h3>
+                        <h3 class="card-title">End-to-end security for GenAI</h3>
                         <p>Explore our approach to comprehensive GenAI security.</p>
                     </a>
                     <a href="https://arxiv.org/abs/2311.12955" class="card">
-                        <h3>Private Retrieval Augmented Generation</h3>
+                        <h3 class="card-title">Private Retrieval Augmented Generation</h3>
                         <p>Learn about our innovative RAG techniques.</p>
                     </a>
                     <a href="https://arxiv.org/abs/2402.02675" class="card">
-                        <h3>Verifiable Model Evaluations</h3>
+                        <h3 class="card-title">Verifiable Model Evaluations</h3>
                         <p>Discover our methods for ensuring AI model integrity.</p>
                     </a>
                     <a href="https://cdn.governance.ai/Open_Problems_in_Technical_AI_Governance.pdf" class="card">
-                        <h3>Open Problems in Technical AI Governance</h3>
+                        <h3 class="card-title">Open Problems in Technical AI Governance</h3>
                         <p>Explore key challenges in AI governance.</p>
                     </a>
                     <a href="#" class="card">
-                        <h3>Personhood Credentials</h3>
+                        <h3 class="card-title">Personhood Credentials</h3>
                         <p>Learn about our work on protecting digital spaces.</p>
                     </a>
                     <a href="https://arxiv.org/abs/2311.13008" class="card">
-                        <h3>Zero-knowledge tax disclosures</h3>
+                        <h3 class="card-title">Zero-knowledge tax disclosures</h3>
                         <p>Discover our research on privacy-preserving financial disclosures.</p>
                     </a>
                 </div>
@@ -292,23 +326,23 @@
                 <p class="section-description">Policy, AI, and the Law explores the intersection of artificial intelligence, policy-making, and legal frameworks. This initiative focuses on developing guidelines and legal mechanisms that ensure AI systems are designed, deployed, and evaluated within a framework that prioritizes safety, fairness, and accountability. The work emphasizes the concept of "Regulation by Design," advocating for AI systems to be built with compliance to legal standards from the ground up. It also addresses the need for safe harbors in AI evaluation and red teaming, allowing for robust testing and assessment of AI models without legal repercussions. Through these efforts, the initiative aims to contribute to a legal environment that fosters innovation while safeguarding public interest and ethical standards in AI.</p>
                 <div class="carousel">
                     <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4753029" class="card">
-                        <h3>Regulation by Design for AI Systems</h3>
+                        <h3 class="card-title">Regulation by Design for AI Systems</h3>
                         <p>Explore our approach to integrating regulation into AI development.</p>
                     </a>
                     <a href="https://arxiv.org/abs/2403.04893" class="card">
-                        <h3>A Safe Harbor for AI Evaluation and Red Teaming</h3>
+                        <h3 class="card-title">A Safe Harbor for AI Evaluation and Red Teaming</h3>
                         <p>Learn about our proposals for secure AI testing environments.</p>
                     </a>
                     <a href="https://www.networklawreview.org/mahari-longpre-generative-ai/" class="card">
-                        <h3>Discit ergo est: Training Data Provenance And Fair Use</h3>
+                        <h3 class="card-title">Discit ergo est: Training Data Provenance And Fair Use</h3>
                         <p>Discover our work on data provenance and fair use in AI.</p>
                     </a>
                     <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4493900" class="card">
-                        <h3>Competition Between AI Foundation Models</h3>
+                        <h3 class="card-title">Competition Between AI Foundation Models</h3>
                         <p>Explore the dynamics of competition in AI development.</p>
                     </a>
                     <a href="https://www.science.org/doi/full/10.1126/science.adh4451" class="card">
-                        <h3>Art and the science of generative AI</h3>
+                        <h3 class="card-title">Art and the science of generative AI</h3>
                         <p>Learn about the intersection of art and AI technology.</p>
                     </a>
                 </div>
